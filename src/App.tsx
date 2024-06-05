@@ -1,11 +1,15 @@
-import React from 'react';
-import Register from './pages/Register';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import RegistrationPage from './pages/RegistrationPage';
+import WelcomePage from './pages/WelcomePage';
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <div>
-      <Register />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<RegistrationPage />} />
+        <Route path="/welcome" element={<WelcomePage />} />
+      </Routes>
+    </Router>
   );
 };
 

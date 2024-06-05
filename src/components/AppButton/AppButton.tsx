@@ -1,14 +1,16 @@
-import { SCAppButton } from "./AppButton.style";
+import { Button } from './AppButton.style';
 
-interface IAppButton {
-        buttonText:string,
-        buttonType:"submit" | "button"
-        isDisabled ?:boolean
-    
+interface AppButtonProps {
+  type: "button" | "submit" | "reset";
+  buttonText: React.ReactNode;
 }
 
-export const AppButton = ({buttonText,buttonType,isDisabled}:IAppButton) => {
-    return (
-        <SCAppButton disabled={isDisabled} type={buttonType}>{buttonText}</SCAppButton>
-    );
+const AppButton = ({ type, buttonText }: AppButtonProps) => {
+  return (
+    <Button type={type}>
+      {buttonText}
+    </Button>
+  );
 };
+
+export default AppButton;
