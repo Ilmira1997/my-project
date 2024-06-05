@@ -38,7 +38,7 @@ const RegistrationPage = () => {
     <div className="registration-container">
       <AppHeader title="Регистрация" />
       <form onSubmit={handleSubmit(onSubmit)}>
-        <FormGroup label="Имя" error={errors.name?.message}>
+        <FormGroup label="Имя пользователя" error={errors.name?.message}>
           <input {...register('name')} placeholder="Имя" />
         </FormGroup>
         
